@@ -1,0 +1,31 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.haptik.ai/bot-as-an-api/which-information-is-sent-as-webhook-payload
+sources:
+- https://docs.haptik.ai/bot-as-an-api/which-information-is-sent-as-webhook-payload
+- https://docs.haptik.ai/what-is-a-webhook-how-does-a-webhook-work
+- https://docs.haptik.ai/sms-notifications
+- https://docs.haptik.ai/notifications-success-measurement
+description: Haptik sends webhook events for various conversation actions.
+events:
+- event: message
+  description: Message sent by an agent or a bot.
+- event: chat_pinned
+  description: A chat has been assigned to an agent.
+- event: chat_complete
+  description: A chat has been marked as complete by an agent from Smart Agent Chat (deprecated in favor of webhook_conversation_complete).
+- event: webhook_conversation_complete
+  description: Conversation has been marked complete by an agent or a bot.
+- event: webhook_agent_chat_close
+  description: The agent has marked the chat as closed from his end.
+- event: webhook_conversation_inactivity
+  description: The conversation has been inactive for greater than 8 minutes.
+- event: webhook_agent_chat_complete
+  description: A new event when an agent completes a chat.
+- event: webhook_conversation_complete_partial
+  description: A new event with 8 min of inactivity.
+delivery:
+  content_type: application/json
+note: The documentation does not specify signature headers, authentication method, or retry behavior for webhook deliveries.
+docs: https://docs.haptik.ai/bot-as-an-api/which-information-is-sent-as-webhook-payload

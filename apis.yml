@@ -1,23 +1,123 @@
 aid: haptik
+
 name: Haptik
-description: 'Haptik is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and
-  added to the network as a stub for full-pipeline profiling.'
+
+description: Haptik, part of Jio Platforms, provides AI‑powered conversational agents for enterprises, enabling customer service, sales, bookings,
+  and lead qualification across messaging channels like WhatsApp, Voice, Instagram, and web chat. Their platform offers analytics, generative
+  AI consulting, and integration tools for building intelligent chatbots that enhance customer experience and drive business outcomes.
+
 url: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
-apis: []
+- AI
+- Conversational
+- Messaging
+- Enterprise
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/haptik-well-known.yml
+- type: Spectral
+  url: rules/haptik-rules.yml
+- type: JSONLD
+  url: json-ld/haptik-context.jsonld
+- type: Vocabulary
+  url: vocabulary/haptik-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/haptik-webhooks.yml
+- type: DataModel
+  url: data-model/haptik-data-model.yml
+- type: ChangeLog
+  url: changelog/haptik-changelog.yml
+- type: Compliance
+  url: https://trust.haptik.ai/
+- type: Conformance
+  url: conformance/haptik-conformance.yml
+- type: Hosts
+  url: hosts/haptik-hosts.yml
+- type: Vendors
+  url: vendors/haptik-vendors.yml
+- type: TermsOfService
+  url: https://www.haptik.ai/terms-india
+- type: Support
+  url: https://www.haptik.ai/ai-agents/support
+- type: PrivacyPolicy
+  url: https://www.haptik.ai/privacy-policy
+- type: ChangeLog
+  url: https://docs.haptik.ai/release-notes
+- type: Blog
+  url: https://www.haptik.ai/blog
+- type: GettingStarted
+  url: https://docs.haptik.ai/getting-started-guides
+- type: Documentation
+  url: https://docs.haptik.ai/
+- type: TrustCenter
+  url: security/haptik-trust-center.yml
+- type: DomainSecurity
+  url: security/haptik-domain-security.yml
 - type: Website
   url: https://www.haptik.ai
+
+apis:
+- name: Haptik API
+  description: Conversational AI platform API documented at Haptik Docs
+  humanURL: https://docs.haptik.ai/
+  aid: haptik:haptik-api-2
+- aid: haptik:haptik-api
+  name: Haptik API
+  description: 'Haptik API as documented publicly: 12 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not
+
+    the provider''s own document.'
+  humanURL: https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+  baseURL: https://staging-messenger.haptikapi.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/haptik-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-integration-external-v20-send-chat-to-agent-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-put-v10-user-request2-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation is public but no OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL files were found on the provider's hosts.
+  evidence:
+  - url: https://docs.haptik.ai/openapi.json
+    status: 404
+  checked: '2026-10-13'
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,125 @@
+{
+  "@context": {
+    "@vocab": "https://haptik.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "haptik": "https://haptik.ai/schema#",
+    "GetIntegrationExternalV20GetChatHistoryResponse": "haptik:GetIntegrationExternalV20GetChatHistoryResponse",
+    "chat_json": {
+      "@id": "haptik:chat_json",
+      "@container": "@list"
+    },
+    "chat_text": {
+      "@id": "haptik:chat_text",
+      "@type": "xsd:string"
+    },
+    "PostIntegrationExternalV20SendChatToAgentRequest": "haptik:PostIntegrationExternalV20SendChatToAgentRequest",
+    "team_name": {
+      "@id": "haptik:team_name",
+      "@type": "xsd:string"
+    },
+    "user_name": {
+      "@id": "haptik:user_name",
+      "@type": "xsd:string"
+    },
+    "business_id": {
+      "@id": "haptik:business_id",
+      "@type": "xsd:decimal"
+    },
+    "countdown": {
+      "@id": "haptik:countdown",
+      "@type": "xsd:decimal"
+    },
+    "receiver": {
+      "@id": "haptik:receiver",
+      "@type": "xsd:string"
+    },
+    "PostIntegrationExternalV20SendChatToAgentResponse": "haptik:PostIntegrationExternalV20SendChatToAgentResponse",
+    "success": {
+      "@id": "haptik:success",
+      "@type": "xsd:boolean"
+    },
+    "PostMogamboApiNodesFaqCreateRequest": "haptik:PostMogamboApiNodesFaqCreateRequest",
+    "domain_name": {
+      "@id": "haptik:domain_name",
+      "@type": "xsd:string"
+    },
+    "csv_file": {
+      "@id": "haptik:csv_file",
+      "@type": "xsd:string"
+    },
+    "PostMogamboApiNodesFaqCreateResponse": "haptik:PostMogamboApiNodesFaqCreateResponse",
+    "task_id": {
+      "@id": "haptik:task_id",
+      "@type": "xsd:string"
+    },
+    "GetMogamboApiNodesFaqCreateStatusTaskidResponse": "haptik:GetMogamboApiNodesFaqCreateStatusTaskidResponse",
+    "status": {
+      "@id": "haptik:status",
+      "@type": "xsd:string"
+    },
+    "PostV10LogFileFromUserRequest": "haptik:PostV10LogFileFromUserRequest",
+    "auth_id": {
+      "@id": "haptik:auth_id",
+      "@type": "xsd:string"
+    },
+    "message_type": {
+      "@id": "haptik:message_type",
+      "@type": "xsd:string"
+    },
+    "file": {
+      "@id": "haptik:file",
+      "@type": "xsd:string"
+    },
+    "message_body": {
+      "@id": "haptik:message_body",
+      "@type": "xsd:string"
+    },
+    "PostV10LogFileFromUserResponse": "haptik:PostV10LogFileFromUserResponse",
+    "message_id": {
+      "@id": "haptik:message_id",
+      "@type": "xsd:integer"
+    },
+    "created_at": {
+      "@id": "haptik:created_at",
+      "@type": "xsd:string"
+    },
+    "file_url": {
+      "@id": "haptik:file_url",
+      "@type": "xsd:string"
+    },
+    "PutV10UserRequest": "haptik:PutV10UserRequest",
+    "name": {
+      "@id": "haptik:name",
+      "@type": "xsd:string"
+    },
+    "language_code": {
+      "@id": "haptik:language_code",
+      "@type": "xsd:string"
+    },
+    "custom_data": {
+      "@id": "haptik:custom_data"
+    },
+    "PostV10UserRequest": "haptik:PostV10UserRequest",
+    "mobile_no": {
+      "@id": "haptik:mobile_no",
+      "@type": "xsd:string"
+    },
+    "email": {
+      "@id": "haptik:email",
+      "@type": "xsd:string"
+    },
+    "PostV10UserResponse": "haptik:PostV10UserResponse",
+    "PutV10UserRequest2": "haptik:PutV10UserRequest2",
+    "PutV10UserResponse": "haptik:PutV10UserResponse",
+    "PostV10V10IdRequest": "haptik:PostV10V10IdRequest"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Haptik API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Haptik's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-13) from openapi/_ae-authored/haptik-openapi-generated.yml.",
+  "dcterms:created": "2026-10-13",
+  "dcterms:source": [
+    "openapi/_ae-authored/haptik-openapi-generated.yml"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/haptik/main/json-schema/haptik-put-v10-user-request2-schema.json",
+  "title": "PutV10UserRequest2",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/haptik-openapi-generated.yml#/components/schemas/PutV10UserRequest2",
+  "type": "object",
+  "properties": {
+    "auth_id": {
+      "type": "string",
+      "description": "This is an alphanumeric User identifier from your System"
+    },
+    "mobile_no": {
+      "type": "string",
+      "description": "Mobile no of the user"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email of the user"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the user"
+    },
+    "language_code": {
+      "type": "string",
+      "description": "Language identifier for user's preferred language based on ISO 639-1"
+    },
+    "custom_data": {
+      "type": "object",
+      "description": "Flat JSON object with additional user information"
+    }
+  },
+  "required": [
+    "auth_id"
+  ]
+}

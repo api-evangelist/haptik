@@ -1,0 +1,31 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.haptik.ai/release-notes
+sources:
+- https://docs.haptik.ai/release-notes
+- https://docs.haptik.ai/release-notes/release-notes-on-web-sdk
+- https://docs.haptik.ai/release-notes/haptik-release-notes-april-june-2022
+- https://docs.haptik.ai/essentials/what-is-bot-versioning
+entries:
+- breaking: false
+  highlights:
+  - An optional parameter is added in order to defer SDK loading.
+  - This will make sure that your web page is not affected by the loading of Web SDK.
+  date: '2022-10-05'
+- breaking: false
+  highlights:
+  - Some Static resources were moved to AWS S3, because of which the SDK bundle size was reduced by 35 KB.
+  date: '2022-09-05'
+- breaking: false
+  highlights:
+  - Migrated to dayjs.
+  - The duplicate dependencies issue was fixed.
+  - The bundle size is reduced by 70KB.
+  date: '2022-05-05'
+- breaking: false
+  highlights:
+  - The Chunk split issue was fixed, because of which the SDK bundle size was reduced by 108 KB.
+  date: '2022-04-27'
+note: The pages do not specify a versioning scheme or a current version for the overall product; only individual release dates are listed.
+docs: https://docs.haptik.ai/release-notes

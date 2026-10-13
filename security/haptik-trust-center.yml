@@ -1,0 +1,17 @@
+generated: '2026-10-13'
+method: searched
+probe: true
+source: https://trust.haptik.ai/
+url: https://trust.haptik.ai/
+certifications:
+- ISO 27001
+- HIPAA
+- GDPR
+- FIPS 140
+evidence:
+- source: https://trust.haptik.ai/
+  keywords:
+  - iso/iec 27001
+  - hipaa
+  - trust center
+  - gdpr

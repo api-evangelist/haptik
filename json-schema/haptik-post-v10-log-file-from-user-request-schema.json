@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/haptik/main/json-schema/haptik-post-v10-log-file-from-user-request-schema.json",
+  "title": "PostV10LogFileFromUserRequest",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/haptik-openapi-generated.yml#/components/schemas/PostV10LogFileFromUserRequest",
+  "type": "object",
+  "properties": {
+    "auth_id": {
+      "type": "string",
+      "description": "Alphanumeric User identifier from your system"
+    },
+    "business_id": {
+      "type": "string",
+      "description": "Numeric identifier for channel/queue on which the message is to be registered"
+    },
+    "message_type": {
+      "type": "string",
+      "description": "The message type should be 1 for image and 52 for document"
+    },
+    "file": {
+      "type": "string",
+      "description": "Contents of the file (binary). Max file size allowed is 10MB"
+    },
+    "message_body": {
+      "type": "string",
+      "description": "The message body containing the message to be sent to the bot or agent"
+    }
+  },
+  "required": [
+    "auth_id",
+    "business_id",
+    "message_type",
+    "file"
+  ]
+}

@@ -1,0 +1,27 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.haptik.ai/bot-as-an-api/how-to-ensure-api-security
+sources:
+- https://docs.haptik.ai/bot-as-an-api/how-to-ensure-api-security
+- https://docs.haptik.ai/bot-as-an-api/what-are-the-security-protocols-to-follow-for-using-apis
+standards:
+- id: gdpr
+  conforms: true
+  evidence: Data Security & Privacy Policy GDPR
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: bearer (http)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+- id: pagination
+  conforms: true
+  evidence: list operations take limit
+docs: https://docs.haptik.ai/bot-as-an-api/how-to-ensure-api-security
