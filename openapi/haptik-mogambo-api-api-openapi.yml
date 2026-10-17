@@ -1,0 +1,141 @@
+openapi: 3.2.0
+info:
+  title: Haptik Mogambo API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 12 operation(s) read from 6 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Haptik has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 7
+    pages-with-code: 6
+    pages-read: 6
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-message-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-feedback-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+  - https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+  - https://docs.haptik.ai/cibil-integration/how-to-generate-p12-certificate-for-cibil
+servers:
+- url: https://staging-messenger.haptikapi.com
+security:
+- bearer: []
+tags:
+- name: Mogambo Api
+paths:
+  /mogambo_api/nodes/faq/create/:
+    post:
+      operationId: post_mogambo_api_nodes_faq_create
+      tags:
+      - Mogambo Api
+      summary: FAQ Step Creation APIs for KMS
+      x-source: https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <TOKEN>
+      - name: client-id
+        in: header
+        required: true
+        schema:
+          type: string
+        description: <CLIENT_ID>
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: multipart/form-data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostMogamboApiNodesFaqCreateRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostMogamboApiNodesFaqCreateResponse'
+      x-evidence:
+        kind: documentation
+  /mogambo_api/nodes/faq/create/status/{taskId}/:
+    get:
+      operationId: get_mogambo_api_nodes_faq_create_status_taskId
+      tags:
+      - Mogambo Api
+      summary: Polling API to fetch submitted task Status
+      x-source: https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+      parameters:
+      - name: taskId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <TOKEN>
+      - name: client-id
+        in: header
+        required: true
+        schema:
+          type: string
+        description: <CLIENT_ID>
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMogamboApiNodesFaqCreateStatusTaskidResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostMogamboApiNodesFaqCreateResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Indicates if the API was a success or failure
+        task_id:
+          type: string
+          description: Job id for the submitted task
+    PostMogamboApiNodesFaqCreateRequest:
+      type: object
+      properties:
+        domain_name:
+          type: string
+          description: Name of the Domain/Bot
+        csv_file:
+          type: string
+          description: CSV file containing FAQ steps
+      required:
+      - domain_name
+      - csv_file
+    GetMogamboApiNodesFaqCreateStatusTaskidResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Indicates if the API was a success or failure
+        status:
+          type: string
+          description: Status of the task (e.g., In Progress, Success, Error/Exception)
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

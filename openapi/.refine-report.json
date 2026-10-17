@@ -1,0 +1,33 @@
+{
+  "provider": "haptik",
+  "sources": [
+    "_ae-authored/haptik-openapi-generated.yml"
+  ],
+  "outputs": [
+    "haptik-gccs-ws-api-openapi.yml",
+    "haptik-haptik-api-api-openapi.yml",
+    "haptik-integration-api-openapi.yml",
+    "haptik-log-file-from-user-api-openapi.yml",
+    "haptik-mogambo-api-api-openapi.yml",
+    "haptik-user-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "haptik-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "haptik-openapi-generated.yml: tagged paths GET / -> Haptik API",
+    "haptik-openapi-generated.yml: tagged paths POST / -> Haptik API",
+    "haptik-openapi-generated.yml: tagged paths POST /v1.0/log_file_from_user/ -> Log File From User",
+    "haptik-openapi-generated.yml: tagged paths PUT /v1.0/user -> User",
+    "haptik-openapi-generated.yml: tagged paths POST /v1.0/user/ -> User",
+    "haptik-openapi-generated.yml: tagged paths PUT /v1.0/user/ -> User",
+    "haptik-openapi-generated.yml: tagged paths POST /v1.0/{v10id} -> Haptik API",
+    "haptik-openapi-generated.yml: declared missing tag: Haptik API",
+    "haptik-openapi-generated.yml: declared missing tag: Log File From User",
+    "haptik-openapi-generated.yml: declared missing tag: User",
+    "apis.yml register: written (+6 apis, 7 total)"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,106 @@
+openapi: 3.2.0
+info:
+  title: Haptik API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 12 operation(s) read from 6 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Haptik has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 7
+    pages-with-code: 6
+    pages-read: 6
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-message-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-feedback-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+  - https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+  - https://docs.haptik.ai/cibil-integration/how-to-generate-p12-certificate-for-cibil
+servers:
+- url: https://staging-messenger.haptikapi.com
+security:
+- bearer: []
+tags:
+- name: Haptik API
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Haptik API
+      summary: GET /
+      x-source: https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://<base-url>/mogambo_api/nodes/faq/create/status/<task_id>/  -H 'authorization: Bearer <TOKEN>'  -H 'client-id: <CLIENT ID>'  Possible Statuses: \n Error/Exception : shows the exception/error that occurred for the last step and stops the execution \n In Progress : Step Creation is in progress \n Success : Step has been created successfully \nBest Practices \n 1. Assign Chat to Agent "
+    post:
+      operationId: post
+      tags:
+      - Haptik API
+      summary: POST /
+      x-source: https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST https://<BASE_URL>/v1.0/log_file_from_user/  -H 'Authorization: Bearer <TOKEN>'  -H 'client-id: <CLIENT_ID>'  -H 'Content-Type: multipart/form-data'  -F \"auth_id=<AUTH_ID>\"  -F \"business_id=<BUSINESS_ID>\"  -F \"message_type=1\"  -F \"file=@/home/user1/Desktop/test.jpg\"  -F \"message_body=\" \n Base64 images are not supported. \n Was this article helpful? \n \U0001F44D Yes \n \U0001F44E No \n Thanks! How could we"
+  /v1.0/{v10id}:
+    post:
+      operationId: post_v1_0_v10id
+      tags:
+      - Haptik API
+      summary: POST /v1.0/user
+      x-source: https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+      parameters:
+      - name: v10id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV10V10IdRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  https://staging-messenger.haptikapi.com/v1.0/user/  -H 'Authorization: Bearer <TOKEN>'  -H 'client-id: <CLIENT_ID>'  -H 'Content-Type: application/json'  -d '{\"auth_id\": \"<AUTH_ID>\", \"name\": \"guest user\", \"language_code\":\"<LANGUAGE_CODE>\",\n \"custom_data\": {\n \"<key_1>\": \"<value_1>\",\n \"<key_2>\": \"<value_2>\"\n }}' \n Update User "
+        collapsed_from: 2 example path(s) differing only at v10Id
+components:
+  schemas:
+    PostV10V10IdRequest:
+      type: object
+      properties:
+        auth_id:
+          type: string
+        name:
+          type: string
+        language_code:
+          type: string
+        custom_data:
+          type: object
+          properties:
+            <key_1>:
+              type: string
+            <key_2>:
+              type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -1,0 +1,185 @@
+openapi: 3.2.0
+info:
+  title: Haptik User API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 12 operation(s) read from 6 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Haptik has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 7
+    pages-with-code: 6
+    pages-read: 6
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-message-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-feedback-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+  - https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+  - https://docs.haptik.ai/cibil-integration/how-to-generate-p12-certificate-for-cibil
+servers:
+- url: https://staging-messenger.haptikapi.com
+security:
+- bearer: []
+tags:
+- name: User
+paths:
+  /v1.0/user:
+    put:
+      operationId: put_v1_0_user
+      tags:
+      - User
+      summary: PUT /v1.0/user
+      x-source: https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV10UserRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT  https://staging-messenger.haptikapi.com/v1.0/user/  -H 'Authorization: Bearer <TOKEN>'  -H 'client-id: <CLIENT_ID>'  -H 'Content-Type: application/json'  -d '{\"auth_id\": \"<AUTH_ID>\", \"name\": \"guest user\", \"language_code\":\"<LANGUAGE_CODE>\",\n \"custom_data\": {\n \"<key_1>\": \"<value_1>\",\n \"<key_2>\": \"<value_2>\"\n }}' \n Was this article helpful? \n \U0001F44D Yes \n \U0001F44E No \n Thanks! How could we make this"
+  /v1.0/user/:
+    post:
+      operationId: post_v1_0_user
+      tags:
+      - User
+      summary: Create or Update Haptik User API
+      x-source: https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV10UserRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV10UserResponse'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: putV10User
+      tags:
+      - User
+      summary: Create or Update Haptik User API
+      x-source: https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV10UserRequest2'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV10UserResponse'
+      x-evidence:
+        kind: documentation
+      x-operation-id-source: normalized
+      x-operation-id-original: put_v1_0_user
+components:
+  schemas:
+    PutV10UserRequest2:
+      type: object
+      properties:
+        auth_id:
+          type: string
+          description: This is an alphanumeric User identifier from your System
+        mobile_no:
+          type: string
+          description: Mobile no of the user
+        email:
+          type: string
+          description: Email of the user
+        name:
+          type: string
+          description: Name of the user
+        language_code:
+          type: string
+          description: Language identifier for user's preferred language based on ISO 639-1
+        custom_data:
+          type: object
+          description: Flat JSON object with additional user information
+      required:
+      - auth_id
+    PostV10UserResponse:
+      type: object
+      properties:
+        auth_id:
+          type: string
+        mobile_no:
+          type: string
+        email:
+          type: string
+        name:
+          type: string
+    PostV10UserRequest:
+      type: object
+      properties:
+        auth_id:
+          type: string
+          description: This is an alphanumeric User identifier from your System
+        mobile_no:
+          type: string
+          description: Mobile no of the user
+        email:
+          type: string
+          description: Email of the user
+        name:
+          type: string
+          description: Name of the user
+        language_code:
+          type: string
+          description: Language identifier for user's preferred language based on ISO 639-1
+        custom_data:
+          type: object
+          description: Flat JSON object with additional user information
+      required:
+      - auth_id
+    PutV10UserResponse:
+      type: object
+      properties:
+        auth_id:
+          type: string
+        mobile_no:
+          type: string
+        email:
+          type: string
+        name:
+          type: string
+    PutV10UserRequest:
+      type: object
+      properties:
+        auth_id:
+          type: string
+        name:
+          type: string
+        language_code:
+          type: string
+        custom_data:
+          type: object
+          properties:
+            <key_1>:
+              type: string
+            <key_2>:
+              type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

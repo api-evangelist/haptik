@@ -1,0 +1,49 @@
+openapi: 3.2.0
+info:
+  title: Haptik Gccs Ws API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 12 operation(s) read from 6 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Haptik has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 7
+    pages-with-code: 6
+    pages-read: 6
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-message-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-feedback-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+  - https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+  - https://docs.haptik.ai/cibil-integration/how-to-generate-p12-certificate-for-cibil
+servers:
+- url: https://staging-messenger.haptikapi.com
+security:
+- bearer: []
+tags:
+- name: Gccs Ws
+paths:
+  /GCCS-ws/GlobalCreditPlatformWebServicev2:
+    get:
+      operationId: get_GCCS_ws_GlobalCreditPlatformWebServicev2
+      tags:
+      - Gccs Ws
+      summary: GET /GCCS-ws/GlobalCreditPlatformWebServicev2
+      x-source: https://docs.haptik.ai/cibil-integration/how-to-generate-p12-certificate-for-cibil
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl  command for certificate connectivity   wget -v --certificate=/path/to/certificate.crt --private-key=/path/to/file.key --ca-certificate=/path/to/cacertificate.crt https://gccs-in-live.sd.demo.truelink.com/GCCS-ws/GlobalCreditPlatformWebServicev2?wsdl '
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -83,17 +83,16 @@ apis:
   description: Conversational AI platform API documented at Haptik Docs
   humanURL: https://docs.haptik.ai/
   aid: haptik:haptik-api-2
-- aid: haptik:haptik-api
-  name: Haptik API
-  description: 'Haptik API as documented publicly: 12 operations. Contract generated from the documentation by API Evangelist (2026-10-13); not
-
-    the provider''s own document.'
-  humanURL: https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+- aid: haptik:haptik-gccs-ws-api
+  name: Haptik Gccs Ws API
+  description: The Gccs Ws API from Haptik — 1 operation(s) for gccs ws.
+  humanURL: https://docs.haptik.ai/
   baseURL: https://staging-messenger.haptikapi.com
+  tags:
+  - Gccs Ws
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/haptik-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/haptik-gccs-ws-api-openapi.yml
   - type: JSONSchema
     url: json-schema/haptik-post-v10-log-file-from-user-request-schema.json
   - type: JSONSchema
@@ -106,7 +105,116 @@ apis:
     url: json-schema/haptik-post-v10-log-file-from-user-response-schema.json
   - type: JSONSchema
     url: json-schema/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response-schema.json
-
+- aid: haptik:haptik-haptik-api-api
+  name: Haptik Haptik API
+  description: The Haptik API API from Haptik — 2 operation(s) for haptik api.
+  humanURL: https://docs.haptik.ai/
+  baseURL: https://staging-messenger.haptikapi.com
+  tags:
+  - Haptik API
+  properties:
+  - type: OpenAPI
+    url: openapi/haptik-haptik-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-integration-external-v20-send-chat-to-agent-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-put-v10-user-request2-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response-schema.json
+- aid: haptik:haptik-integration-api
+  name: Haptik Integration API
+  description: The Integration API from Haptik — 2 operation(s) for integration.
+  humanURL: https://docs.haptik.ai/
+  baseURL: https://staging-messenger.haptikapi.com
+  tags:
+  - Integration
+  properties:
+  - type: OpenAPI
+    url: openapi/haptik-integration-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-integration-external-v20-send-chat-to-agent-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-put-v10-user-request2-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response-schema.json
+- aid: haptik:haptik-log-file-from-user-api
+  name: Haptik Log File From User API
+  description: The Log File From User API from Haptik — 1 operation(s) for log file from user.
+  humanURL: https://docs.haptik.ai/
+  baseURL: https://staging-messenger.haptikapi.com
+  tags:
+  - Log File From User
+  properties:
+  - type: OpenAPI
+    url: openapi/haptik-log-file-from-user-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-integration-external-v20-send-chat-to-agent-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-put-v10-user-request2-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response-schema.json
+- aid: haptik:haptik-mogambo-api-api
+  name: Haptik Mogambo API
+  description: The Mogambo Api API from Haptik — 2 operation(s) for mogambo api.
+  humanURL: https://docs.haptik.ai/
+  baseURL: https://staging-messenger.haptikapi.com
+  tags:
+  - Mogambo Api
+  properties:
+  - type: OpenAPI
+    url: openapi/haptik-mogambo-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-integration-external-v20-send-chat-to-agent-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-put-v10-user-request2-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response-schema.json
+- aid: haptik:haptik-user-api
+  name: Haptik User API
+  description: The User API from Haptik — 2 operation(s) for user.
+  humanURL: https://docs.haptik.ai/
+  baseURL: https://staging-messenger.haptikapi.com
+  tags:
+  - User
+  properties:
+  - type: OpenAPI
+    url: openapi/haptik-user-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-integration-external-v20-send-chat-to-agent-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-put-v10-user-request2-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-post-v10-log-file-from-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

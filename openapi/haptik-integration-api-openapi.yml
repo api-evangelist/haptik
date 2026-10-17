@@ -1,0 +1,186 @@
+openapi: 3.2.0
+info:
+  title: Haptik Integration API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 12 operation(s) read from 6 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Haptik has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 7
+    pages-with-code: 6
+    pages-read: 6
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-file-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-message-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-send-feedback-to-haptik-using-api
+  - https://docs.haptik.ai/bot-as-an-api/how-to-createupdate-a-haptik-user-using-api
+  - https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+  - https://docs.haptik.ai/cibil-integration/how-to-generate-p12-certificate-for-cibil
+servers:
+- url: https://staging-messenger.haptikapi.com
+security:
+- bearer: []
+tags:
+- name: Integration
+paths:
+  /integration/external/v2.0/get_chat_history/:
+    get:
+      operationId: get_integration_external_v2_0_get_chat_history
+      tags:
+      - Integration
+      summary: Get Chat Transcripts v2.0
+      x-source: https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <TOKEN>
+      - name: Client-ID
+        in: header
+        required: true
+        schema:
+          type: string
+        description: <CLIENT_ID>
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      - name: business_id
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Business ID for native Haptik consumers
+      - name: user_name
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Haptik user name
+      - name: conversation_no
+        in: query
+        required: true
+        schema:
+          type: integer
+        description: Conversation number of user's chat
+      - name: pxut
+        in: query
+        required: false
+        schema:
+          type: string
+        description: TRACT Packed eXtensible User Token
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Limit on number of messages that the API should return
+      - name: response_type
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Either json (default) or text
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIntegrationExternalV20GetChatHistoryResponse'
+      x-evidence:
+        kind: documentation
+  /integration/external/v2.0/send_chat_to_agent/:
+    post:
+      operationId: post_integration_external_v2_0_send_chat_to_agent
+      tags:
+      - Integration
+      summary: Move a chat to pending
+      x-source: https://docs.haptik.ai/developer-guides/what-are-the-different-apis-that-can-be-used-on-conversation-studio
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Bearer <TOKEN>
+      - name: client-id
+        in: header
+        required: true
+        schema:
+          type: string
+        description: <CLIENT_ID>
+      - name: Content-Type
+        in: header
+        required: true
+        schema:
+          type: string
+        description: application/json
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostIntegrationExternalV20SendChatToAgentRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostIntegrationExternalV20SendChatToAgentResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostIntegrationExternalV20SendChatToAgentRequest:
+      type: object
+      properties:
+        team_name:
+          type: string
+          description: Name of the team to which the chat is to be assigned.
+        user_name:
+          type: string
+          description: Identifier for the User provided by Haptik when invoking the Integration API
+        business_id:
+          type: number
+          description: Numeric identifier for the channel where the User is messaging
+        countdown:
+          type: number
+          description: Time in seconds before chat is moved to queue (5‑10 seconds).
+        receiver:
+          type: string
+          description: Athena is Haptik's internal Smart agent chat.
+      required:
+      - team_name
+      - user_name
+      - business_id
+      - receiver
+    PostIntegrationExternalV20SendChatToAgentResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Indicates if the API was a success or failure
+    GetIntegrationExternalV20GetChatHistoryResponse:
+      type: object
+      properties:
+        chat_json:
+          type: array
+          description: Array of chat messages when response_type=json
+        chat_text:
+          type: string
+          description: Plain text chat when response_type=text
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
