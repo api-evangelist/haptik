@@ -64,5 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Haptik is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and added to the network as a stub for full-pipeline profiling.
-- https://www.haptik.ai
+Haptik, part of Jio Platforms, provides AI‑powered conversational agents for enterprises, enabling customer service, sales, bookings, and lead qualification across messaging channels like WhatsApp, Voice, Instagram, and web chat. Their platform offers analytics, generative AI consulting, and integration tools for building intelligent chatbots that enhance customer experience and drive business outcomes.
+
+**Areas:** Company · Artificial Intelligence · Conversational AI · Messaging · Enterprise
+
+## Haptik on APIs.io
+
+Everything profiled for Haptik is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/haptik/](https://apis.io/providers/haptik/)** — or go straight to one of the APIs or properties below.
+
+### APIs (7)
+
+- [Haptik API](https://apis.io/apis/haptik/haptik-api-2/) — Conversational AI platform API documented at Haptik Docs
+- [Haptik Gccs Ws API](https://apis.io/apis/haptik/haptik-gccs-ws-api/) — The Gccs Ws API from Haptik — 1 operation(s) for gccs ws.
+- [Haptik Haptik API](https://apis.io/apis/haptik/haptik-haptik-api-api/) — The Haptik API API from Haptik — 2 operation(s) for haptik api.
+- [Haptik Integration API](https://apis.io/apis/haptik/haptik-integration-api/) — The Integration API from Haptik — 2 operation(s) for integration.
+- [Haptik Log File From User API](https://apis.io/apis/haptik/haptik-log-file-from-user-api/) — The Log File From User API from Haptik — 1 operation(s) for log file from user.
+- [Haptik Mogambo API](https://apis.io/apis/haptik/haptik-mogambo-api-api/) — The Mogambo Api API from Haptik — 2 operation(s) for mogambo api.
+- [Haptik User API](https://apis.io/apis/haptik/haptik-user-api/) — The User API from Haptik — 2 operation(s) for user.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Haptik Webhooks](https://apis.io/asyncapis/haptik/haptik-webhooks/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetMogamboApiNodesFaqCreateStatusTaskidResponse](https://apis.io/schemas/haptik/haptik-get-mogambo-api-nodes-faq-create-status-taskid-response/)
+- [PostIntegrationExternalV20SendChatToAgentRequest](https://apis.io/schemas/haptik/haptik-post-integration-external-v20-send-chat-to-agent-request/)
+- [PostV10LogFileFromUserRequest](https://apis.io/schemas/haptik/haptik-post-v10-log-file-from-user-request/)
+- [PostV10LogFileFromUserResponse](https://apis.io/schemas/haptik/haptik-post-v10-log-file-from-user-response/)
+- [PostV10UserRequest](https://apis.io/schemas/haptik/haptik-post-v10-user-request/)
+- [PutV10UserRequest2](https://apis.io/schemas/haptik/haptik-put-v10-user-request2/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Haptik Context](https://apis.io/jsonld/haptik/haptik-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Haptik API Rules](https://apis.io/rules/haptik/haptik-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Haptik Domain Security](https://apis.io/security/haptik/haptik-domain-security/)
+- [Haptik Trust Center](https://apis.io/security/haptik/haptik-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.haptik.ai)
+- [Documentation](https://docs.haptik.ai/)
+- [Getting started](https://docs.haptik.ai/getting-started-guides)
+- [Support](https://www.haptik.ai/ai-agents/support)
+- [Changelog](https://docs.haptik.ai/release-notes)
+- [Blog](https://www.haptik.ai/blog)
+- [Compliance](https://trust.haptik.ai/)
+- [Terms of service](https://www.haptik.ai/terms-india)
+- [Privacy policy](https://www.haptik.ai/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 36.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.9 |
+| Contract quality | 33.3 |
+| Contract governance | 35.6 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 36.8 |
+
+**Agent readiness 23.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.8** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/haptik/](https://apis.io/providers/haptik/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Haptik: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/haptik/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
